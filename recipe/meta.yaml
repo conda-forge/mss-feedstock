@@ -10,7 +10,7 @@ source:
     sha256: 2e23e6f0a3c6050b8208d5ccc3d53a31774dee16466f040141414d9313ad76bb
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record record.txt
     skip: True  # [py3k]
     entry_points:
@@ -38,7 +38,7 @@ requirements:
         - six
         - tk 8.5.*
         # FIXME: Workaround until https://github.com/conda-forge/matplotlib-feedstock/issues/36 is fixed.
-        - icu
+        - icu 56.*
 
 test:
     imports:
