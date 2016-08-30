@@ -1,4 +1,4 @@
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
     name: mss
@@ -7,10 +7,10 @@ package:
 source:
     fn: mss-{{ version }}.tar.gz
     url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-    sha256: 2e23e6f0a3c6050b8208d5ccc3d53a31774dee16466f040141414d9313ad76bb
+    sha256: 7823c2b4391ffe75b9e1302281d13e1c2d8683d737c1931b964a83d0d96d3763
 
 build:
-    number: 1
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
     skip: True  # [py3k]
     entry_points:
