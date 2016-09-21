@@ -1,4 +1,4 @@
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 package:
     name: mss
@@ -7,7 +7,7 @@ package:
 source:
     fn: mss-{{ version }}.tar.gz
     url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-    sha256: 7823c2b4391ffe75b9e1302281d13e1c2d8683d737c1931b964a83d0d96d3763
+    sha256: b9fc8ef06059acce4402c41de2556dcacb22c440ed05a004c5a98d9c17b7288b 
 
 build:
     number: 0
@@ -33,6 +33,7 @@ requirements:
         - pillow
         - python-dateutil
         - pytz
+        - pyqt 4.11.*
         - requests
         - scipy
         - six
