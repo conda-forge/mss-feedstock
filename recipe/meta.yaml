@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "1.3.0" %}
 
 package:
     name: mss
@@ -7,7 +7,7 @@ package:
 source:
     fn: mss-{{ version }}.tar.gz
     url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-    sha256: b9fc8ef06059acce4402c41de2556dcacb22c440ed05a004c5a98d9c17b7288b 
+    sha256: 912d86be8b78012c4471c7a7455337cd458fcd2c5b3d0332b6c4916f7bbec5b7
 
 build:
     number: 0
@@ -16,6 +16,7 @@ build:
     entry_points:
       - mss = mslib.msui.mss_pyui:main
       - mswms = mslib.mswms.mswms:main
+      - demodata = mslib.mswms.demodata:main
 
 requirements:
     build:
@@ -29,6 +30,7 @@ requirements:
         - execnet
         - lxml
         - netcdf4
+        - hdf4 4.2.12
         - paste
         - pillow
         - python-dateutil
@@ -38,6 +40,7 @@ requirements:
         - scipy
         - six
         - tk 8.5.*
+        - pykml
         # FIXME: Workaround until https://github.com/conda-forge/matplotlib-feedstock/issues/36 is fixed.
         - icu 56.*
 
