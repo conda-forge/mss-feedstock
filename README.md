@@ -7,7 +7,7 @@ Package license: Apache 2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: A web service based tool to plan atmospheric research flights
+Summary: A web service based tool to plan atmospheric research flights.
 
 
 
