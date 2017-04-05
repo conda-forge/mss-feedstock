@@ -42,8 +42,7 @@ requirements:
     - tk 8.5.*
     - pykml
     # FIXME: Workaround for travis-ci
-    - icu 56.*  # [win]
-    - libxslt 1.1.29.*  # [win]
+    - lxml  # [win]
 
 test:
   imports:
