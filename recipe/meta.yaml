@@ -1,4 +1,4 @@
-{% set version = "1.3.3" %}
+{% set version = load_setup_py_data().version %}
 
 package:
   name: mss
@@ -7,11 +7,10 @@ package:
 source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: a5e873eefba9411999658f9f47b07298e8466c4c82ef626a7413577cdc03c325
+  sha256: 982e70d58e8871bf8de586806c3e200f922e39e0c905128572a9af161bfa21f0
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py3k]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -22,8 +21,10 @@ requirements:
   build:
     - python
     - setuptools
+    - menuinst [win]
   run:
     - python
+    - menuinst [win]
     - basemap 1.0.7
     - chameleon
     - execnet
@@ -34,7 +35,7 @@ requirements:
     - pillow
     - python-dateutil
     - pytz
-    - pyqt 4.11.*
+    - pyqt
     - requests
     - scipy
     - six
@@ -46,6 +47,7 @@ test:
     - mslib
   commands:
     - mswms -h
+    - mss -h
 
 about:
   summary: 'A web service based tool to plan atmospheric research flights.'
