@@ -35,14 +35,12 @@ requirements:
     - pillow
     - python-dateutil
     - pytz
-    - pyqt
+    - pyqt 4.11.*
     - requests
     - scipy
     - six
     - tk 8.5.*
     - pykml
-    # FIXME: Workaround for travis-ci
-    - lxml 3.6.4  # [win]
 
 test:
   imports:
