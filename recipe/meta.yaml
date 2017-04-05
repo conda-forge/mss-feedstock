@@ -36,6 +36,7 @@ requirements:
     - python-dateutil
     - pytz
     - pyqt 4.11.*
+    - qt 4.8.*
     - requests
     - scipy
     - six
