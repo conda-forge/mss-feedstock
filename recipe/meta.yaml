@@ -42,7 +42,7 @@ requirements:
     - tk 8.5.*
     - pykml
     # FIXME: Workaround for travis-ci
-    - lxml  # [win]
+    - lxml 3.6.4  # [win]
 
 test:
   imports:
