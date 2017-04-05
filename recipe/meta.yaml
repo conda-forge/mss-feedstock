@@ -1,4 +1,4 @@
-{% set version = load_setup_py_data().version %}
+{% set version = "1.4.0" %}
 
 package:
   name: mss
