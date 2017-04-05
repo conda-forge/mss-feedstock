@@ -35,8 +35,8 @@ requirements:
     - pillow
     - python-dateutil
     - pytz
-    - pyqt 4.11.*
-    - qt 4.8.*
+    - pyqt 4.11.*  # [osx]
+    - qt 4.8.*  # [osx]
     - requests
     - scipy
     - six
