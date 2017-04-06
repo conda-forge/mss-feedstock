@@ -1,4 +1,4 @@
-{% set version = load_setup_py_data().version %}
+{% set version = "1.4.0" %}
 
 package:
   name: mss
@@ -21,10 +21,10 @@ requirements:
   build:
     - python
     - setuptools
-    - menuinst [win]
+    - menuinst  # [win]
   run:
     - python
-    - menuinst [win]
+    - menuinst  # [win]
     - basemap 1.0.7
     - chameleon
     - execnet
@@ -35,7 +35,8 @@ requirements:
     - pillow
     - python-dateutil
     - pytz
-    - pyqt
+    - pyqt 4.11.*  # [osx]
+    - qt 4.8.*  # [osx]
     - requests
     - scipy
     - six
