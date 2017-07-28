@@ -7,7 +7,7 @@ package:
 source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: c2ddba64dbf5b98184a8ba65b5aa56285cf23352b09166440a5a03ea9a24a5ad
+  sha256: 0f41d2e65fabad5bc8ea8dbdb59a7a9381513f76a595c7ab16d982828c143128
 
 build:
   number: 0
