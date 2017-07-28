@@ -1,4 +1,4 @@
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 package:
   name: mss
@@ -7,7 +7,7 @@ package:
 source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 3b50b24bcdc74c4dc7844b90b857769e8ace71005086222e68262013d438c680
+  sha256: 0f41d2e65fabad5bc8ea8dbdb59a7a9381513f76a595c7ab16d982828c143128
 
 build:
   number: 0
