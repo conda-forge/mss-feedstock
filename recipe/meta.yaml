@@ -7,10 +7,10 @@ package:
 source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: bede2818f2d65e3a1d37185f786061b7ab7ba5849fede5911313e37dd2ea6532 
+  sha256: 1cfa51f766300c6fc41421ef464bf53b6de59afa8c8d9fac2e109006a0a7309d 
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py3k]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
