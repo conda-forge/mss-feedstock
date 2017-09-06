@@ -1,4 +1,4 @@
-{% set version = "1.5.6" %}
+{% set version = "1.6.0" %}
 
 package:
   name: mss
@@ -44,6 +44,7 @@ requirements:
     - tk 8.5.*
     - pykml
     - owslib
+    - unicodecsv
     - future
 
 test:
