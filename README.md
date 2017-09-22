@@ -9,6 +9,19 @@ Feedstock license: BSD 3-Clause
 
 Summary: A web service based tool to plan atmospheric research flights.
 
+MSS - Mission Support System
+
+http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
+
+Software for planning research Aircraft Missions.
+For discussion of the possibilites of the research flights,
+the Mission Support System (MSS) was developed.
+This software helps to review a big amount of metereological and
+model data by viewing the forecasted parameters of interest along possible regions
+of a proposed flight path. Data and possible flight paths can
+be displayed on a hoizontal view (map projection) or on a vertical
+view (along the proposed flight path). Flight paths can be constructed
+and modified on these views. Exchange through a waypoint table is also possible.
 
 
 Current build status
@@ -66,6 +79,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
