@@ -1,4 +1,4 @@
-{% set version = "1.6.3" %}
+{% set version = "1.7.0" %}
 
 
 package:
@@ -8,11 +8,10 @@ package:
 source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 94af040a92dd4670bfb6a53c92237ca464df075cfd9a1d3e4231a6860d526bd4
+  sha256: 91db6780d73b55784c06209d5e7688af3280ab7634aafac12172f66f5ae5f49e
 
 build:
   number: 0
-  skip: True  # [py3k]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -27,26 +26,29 @@ requirements:
   run:
     - python
     - menuinst  # [win]
-    - basemap 1.0.7
+    - basemap 1.1.*
     - chameleon
     - execnet
+    - jplephem
     - lxml
     - netcdf4
-    - hdf4 4.2.12
+    - hdf4
     - paste
     - pillow
     - python-dateutil
     - pytz
-    - pyqt 4.11.*  # [osx]
-    - qt 4.8.*  # [osx]
+    - pyqt 5.*
+    - qt 5.*
     - requests
     - scipy
+    - sgp4
+    - skyfield
     - six
-    - tk 8.5.*
-    - pykml
+    - tk
     - owslib
     - unicodecsv
-    - future
+    - fs_filepicker
+    - future  # [py2k]
 
 test:
   imports:
