@@ -1,6 +1,5 @@
 {% set version = "1.7.1" %}
 
-
 package:
   name: mss
   version: {{ version }}
