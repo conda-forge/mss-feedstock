@@ -48,7 +48,6 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - future  # [py2k]
-    - pyproj 1.9.5.1  # [py27 or py36]
 
 test:
   imports:
