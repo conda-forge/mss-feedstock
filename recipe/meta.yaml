@@ -48,7 +48,7 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - future  # [py2k]
-    - pyproj 1.9.5.1  # [win and (environ.get('CF_MAX_PY_VER', '') >= '36')]
+    - pyproj 1.9.5.1
 
 test:
   imports:
