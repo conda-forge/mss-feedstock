@@ -10,7 +10,7 @@ source:
   sha256: e8ed2b3d923709442fd6172253616de16c4066977eb174c3ab48cb5627052e4d
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -30,7 +30,7 @@ requirements:
     - execnet
     - jplephem
     - lxml
-    - netcdf4
+    - netcdf4 1.4.0
     - hdf4
     - paste
     - pillow
@@ -48,6 +48,7 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - future  # [py2k]
+    - pyproj 1.9.5.1  # [win and (environ.get('CF_MAX_PY_VER', '') >= '36')]
 
 test:
   imports:
