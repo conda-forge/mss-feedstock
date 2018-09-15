@@ -10,7 +10,7 @@ source:
   sha256: e8ed2b3d923709442fd6172253616de16c4066977eb174c3ab48cb5627052e4d
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
