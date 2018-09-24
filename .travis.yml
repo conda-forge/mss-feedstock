@@ -18,14 +18,6 @@ env:
 
 
 before_install:
-    - wget http://bit.ly/miniconda -O miniconda.sh
-    - bash miniconda.sh -b -p $HOME/miniconda
-    - export PATH="$HOME/miniconda/bin:$PATH"
-    - conda config --set always_yes yes --set changeps1 no --set show_channel_urls true
-    - conda update conda
-    - conda config --add channels conda-forge --force
-    - conda create --name TEST python=$TRAVIS_PYTHON_VERSION phantomjs --file requirements.txt --file requirements-dev.txt
-    - source activate TEST
     # Fast finish the PR.
     - |
       (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/branch2.0/recipe/conda_forge_ci_setup/ff_ci_pr_build.py | \
