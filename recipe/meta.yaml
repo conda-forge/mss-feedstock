@@ -8,11 +8,6 @@ source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
   sha256: e8ed2b3d923709442fd6172253616de16c4066977eb174c3ab48cb5627052e4d
-  patches:
-    # This is current failing on Windows,
-    # for some reason it cannot find the PROJ_LIB variable
-    # even though it is defined in proj.4's the activation scripts.
-    - data_dir.patch
 
 build:
   number: 2
