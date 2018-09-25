@@ -51,6 +51,7 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - future  # [py2k]
+    - pyproj
 
 test:
   imports:
