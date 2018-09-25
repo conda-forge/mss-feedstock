@@ -50,6 +50,7 @@ requirements:
     - owslib
     - unicodecsv
     - fs_filepicker
+    - matplotlib 2.2.*
     - future  # [py2k]
 
 test:
