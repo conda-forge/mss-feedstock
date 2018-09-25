@@ -1,0 +1,14 @@
+diff --git a/setup.py b/setup.py
+index 59da681..d951a17 100644
+--- a/setup.py
++++ b/setup.py
+@@ -24,6 +24,9 @@
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ """
++import os
++from pyproj.datadir import pyproj_datadir 
++os.environ["PROJ_LIB"] = pyproj_datadir
+ 
+ # The README.txt file should be written in reST so that PyPI can use
+ # it to generate your project's PyPI page.
