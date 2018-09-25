@@ -1,10 +1,10 @@
 diff --git a/mslib/mswms/mswms.py b/mslib/mswms/mswms.py
-index 06391a2..44a6864 100644
+index 06391a2..7e43d59 100644
 --- a/mslib/mswms/mswms.py
 +++ b/mslib/mswms/mswms.py
-@@ -27,6 +27,16 @@
-     limitations under the License.
- """
+@@ -30,6 +30,16 @@
+ from __future__ import print_function
+ from __future__ import absolute_import
  
 +# Hack to fix missing PROJ4 env var in root environment
 +import os
@@ -16,6 +16,6 @@ index 06391a2..44a6864 100644
 +os.environ["PROJ_LIB"] = proj_lib
 +
 +
- from __future__ import print_function
- from __future__ import absolute_import
- 
+ import paste.httpserver
+ import argparse
+ import logging
