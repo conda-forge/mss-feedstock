@@ -28,7 +28,7 @@ requirements:
   run:
     - python
     - menuinst  # [win]
-    - basemap 1.1.*
+    - basemap
     - chameleon
     - execnet
     - jplephem
@@ -50,7 +50,6 @@ requirements:
     - owslib
     - unicodecsv
     - fs_filepicker
-    - matplotlib 2.2.*
     - future  # [py2k]
 
 test:
