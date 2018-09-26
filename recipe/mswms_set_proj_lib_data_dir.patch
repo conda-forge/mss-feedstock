@@ -1,8 +1,8 @@
 diff --git a/mslib/mswms/mswms.py b/mslib/mswms/mswms.py
-index 06391a2..d1dc764 100644
+index 06391a2..6547787 100644
 --- a/mslib/mswms/mswms.py
 +++ b/mslib/mswms/mswms.py
-@@ -30,6 +30,20 @@
+@@ -30,6 +30,23 @@
  from __future__ import print_function
  from __future__ import absolute_import
  
@@ -16,8 +16,11 @@ index 06391a2..d1dc764 100644
 +    proj_lib = os.path.join(os.path.join(conda_dir, 'share'), 'proj')
 +    os.environ["PROJ_LIB"] = proj_lib
 +    if not os.path.exists(proj_lib):
-+        with open(proj_lib, 'w') as fid:
-+            fid.write("# Placeholder for epsg data")
++        os.makedirs(proj_lib)
++        epsg_file = os.path.join(proj_lib, 'epsg')
++        if not os.path.exists(espg_file):
++            with open(os.path.join(proj_lib, 'epsg'), 'w') as fid:
++                fid.write("# Placeholder for epsg data")
 +
 +
  import paste.httpserver
