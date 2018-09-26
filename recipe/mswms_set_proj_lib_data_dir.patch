@@ -1,5 +1,5 @@
 diff --git a/mslib/mswms/mswms.py b/mslib/mswms/mswms.py
-index 06391a2..6547787 100644
+index 06391a2..4f74d61 100644
 --- a/mslib/mswms/mswms.py
 +++ b/mslib/mswms/mswms.py
 @@ -30,6 +30,23 @@
@@ -18,7 +18,7 @@ index 06391a2..6547787 100644
 +    if not os.path.exists(proj_lib):
 +        os.makedirs(proj_lib)
 +        epsg_file = os.path.join(proj_lib, 'epsg')
-+        if not os.path.exists(espg_file):
++        if not os.path.exists(epsg_file):
 +            with open(os.path.join(proj_lib, 'epsg'), 'w') as fid:
 +                fid.write("# Placeholder for epsg data")
 +
