@@ -12,7 +12,7 @@ source:
     # os.environ["PROJ_LIB"]  is not set on a root environment
     - set_proj_lib_data_dir.patch
     - mswms_set_proj_lib_data_dir.patch 
-
+    - mss_pyui_set_proj_lib_data_dir.patch
 build:
   number: 2
   entry_points:
