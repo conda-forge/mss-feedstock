@@ -14,7 +14,7 @@ source:
     - mswms_set_proj_lib_data_dir.patch 
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
-  number: 2
+  number: 1
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -34,7 +34,7 @@ requirements:
     - execnet
     - jplephem
     - lxml
-    - netcdf4 1.4.0
+    - netcdf4
     - hdf4
     - paste
     - pillow
