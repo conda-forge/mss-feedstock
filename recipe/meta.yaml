@@ -52,6 +52,8 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - future  # [py2k]
+    - cftime >=1.1.0
+    - matplotlib <3.0.0
     - proj4
 
 test:
