@@ -1,5 +1,5 @@
 diff --git a/mslib/msui/mss_pyui.py b/mslib/msui/mss_pyui.py
-index d76a1e4..dd977ba 100644
+index d76a1e4..45e428a 100644
 --- a/mslib/msui/mss_pyui.py
 +++ b/mslib/msui/mss_pyui.py
 @@ -30,6 +30,28 @@
@@ -11,7 +11,7 @@ index d76a1e4..dd977ba 100644
 +import setuptools
 +import warnings
 +
-+if os.getenv("PROJ_LIB") is None or os.getenv("PROJ_LIB") is "PROJ_LIB":
++if os.getenv("PROJ_LIB") is None or os.getenv("PROJ_LIB") == "PROJ_LIB":
 +    warnings.warn(
 +        "using base env is deprecated, use an env to install mss",
 +        DeprecationWarning
