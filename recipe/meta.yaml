@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     - menuinst  # [win]
-    - basemap
+    - basemap >=1.1.0
     - chameleon
     - execnet
     - jplephem
