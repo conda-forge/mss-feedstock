@@ -1,21 +1,17 @@
 diff --git a/mslib/mswms/mswms.py b/mslib/mswms/mswms.py
-index 06391a2..0242e88 100644
+index 06391a2..3825204 100644
 --- a/mslib/mswms/mswms.py
 +++ b/mslib/mswms/mswms.py
-@@ -30,6 +30,28 @@
+@@ -30,6 +30,24 @@
  from __future__ import print_function
  from __future__ import absolute_import
  
 +# Hack to fix missing PROJ4 env var in root environment
 +import os
 +import setuptools
-+import warnings
++
 +
 +if os.getenv("PROJ_LIB") is None or os.getenv("PROJ_LIB") == "PROJ_LIB":
-+    warnings.warn(
-+        "using base env is deprecated, use an env to install mss",
-+        DeprecationWarning
-+    )
 +    conda_file_dir = setuptools.__file__
 +    conda_dir = conda_file_dir.split('lib')[0]
 +    proj_lib = os.path.join(os.path.join(conda_dir, 'share'), 'proj')
