@@ -14,7 +14,8 @@ source:
     - mswms_set_proj_lib_data_dir.patch 
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
-  number: 1
+  skip: true  # [py35]
+  number: 2
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -37,7 +38,7 @@ requirements:
     - netcdf4
     - hdf4
     - paste
-    - pillow
+    - pillow 5.*
     - python-dateutil
     - pytz
     - pyqt 5.*
