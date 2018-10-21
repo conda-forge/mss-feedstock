@@ -1,4 +1,4 @@
-{% set version = "1.7.3" %}
+{% set version = "1.7.4" %}
 
 package:
   name: mss
@@ -11,11 +11,9 @@ source:
   patches:
     # os.environ["PROJ_LIB"]  is not set on a root environment
     - set_proj_lib_data_dir.patch
-    - mswms_set_proj_lib_data_dir.patch 
-    - mss_pyui_set_proj_lib_data_dir.patch
 build:
   skip: true  # [py35]
-  number: 2
+  number: 0
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
