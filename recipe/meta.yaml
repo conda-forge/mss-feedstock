@@ -14,7 +14,7 @@ source:
     - mswms_set_proj_lib_data_dir.patch
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
-  skip: true  # [py35]
+  skip: true  # [py35 or py37]
   number: 1000
   entry_points:
     - mss = mslib.msui.mss_pyui:main
