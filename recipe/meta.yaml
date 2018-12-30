@@ -11,18 +11,18 @@ source:
   patches:
     # os.environ["PROJ_LIB"]  is not set on a root environment
     - set_proj_lib_data_dir.patch
-    - mswms_set_proj_lib_data_dir.patch 
+    - mswms_set_proj_lib_data_dir.patch
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
-  skip: true  # [py35]
-  number: 0
+  skip: true  # [py35 or py37]
+  number: 1000
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
     - demodata = mslib.mswms.demodata:main
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
     - future
@@ -41,8 +41,8 @@ requirements:
     - pillow 5.*
     - python-dateutil
     - pytz
-    - pyqt 5.*
-    - qt 5.*
+    - pyqt
+    - qt
     - requests
     - scipy
     - sgp4
