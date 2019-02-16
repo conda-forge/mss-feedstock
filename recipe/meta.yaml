@@ -32,6 +32,7 @@ requirements:
     - xorg-libxpm     # [linux]
     - xorg-libxfixes  # [linux]
     - xorg-libxft     # [linux]
+    - libgl1-mesa-dev  # [linux] 
   run:
     - python
     - menuinst  # [win]
@@ -61,11 +62,12 @@ requirements:
     - cftime >=1.0.1
     - matplotlib <3.0.0
     - proj4
-    - freetype        # [linux]
-    - xorg-libxaw     # [linux]
-    - xorg-libxpm     # [linux]
-    - xorg-libxfixes  # [linux]
-    - xorg-libxft     # [linux]
+    - freetype         # [linux]
+    - xorg-libxaw      # [linux]
+    - xorg-libxpm      # [linux]
+    - xorg-libxfixes   # [linux]
+    - xorg-libxft      # [linux]
+    - libgl1-mesa-dev  # [linux] 
 
 test:
   imports:
