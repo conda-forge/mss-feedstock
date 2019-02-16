@@ -24,6 +24,10 @@ build:
 requirements:
   build:
     - {{ cdt('mesa-libgl-devel') }}       # [linux]
+    - {{ cdt('libX11-devel') }}           # [linux]
+    - {{ cdt('libSM-devel') }}            # [linux]
+    - {{ cdt('libXrender-devel') }}       # [linux]
+    - {{ cdt('libXext-devel') }}          # [linux]
   host:
     - python
     - setuptools
