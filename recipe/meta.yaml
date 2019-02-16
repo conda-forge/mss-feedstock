@@ -22,6 +22,8 @@ build:
     - demodata = mslib.mswms.demodata:main
 
 requirements:
+  build:
+    - {{ cdt('mesa-libgl-devel') }}       # [linux]
   host:
     - python
     - setuptools
