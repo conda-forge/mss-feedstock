@@ -67,7 +67,6 @@ requirements:
     - xorg-libxpm      # [linux]
     - xorg-libxfixes   # [linux]
     - xorg-libxft      # [linux]
-    - libgl1-mesa-dev  # [linux] 
     - mesa-libGL-devel   # [linux] 
 test:
   imports:
