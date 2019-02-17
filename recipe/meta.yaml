@@ -27,7 +27,6 @@ requirements:
     - setuptools
     - future
     - menuinst  # [win]
-    - xorg-inputproto  # [linux]
   run:
     - python
     - menuinst  # [win]
@@ -57,7 +56,6 @@ requirements:
     - cftime >=1.0.1
     - matplotlib <3.0.0
     - proj4
-    - xorg-inputproto  # [linux]
 test:
   imports:
     - mslib

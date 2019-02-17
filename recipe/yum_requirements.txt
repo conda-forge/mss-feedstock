@@ -1,8 +1,1 @@
-xorg-x11-server-Xvfb
-gtk2-devel
-libXext-devel
-libXrender-devel
-libSM-devel
-libX11-devel
-mesa-libGL-devel
 mesa-libGL
