@@ -15,7 +15,7 @@ source:
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
   skip: true  # [py35 or py37]
-  number: 1000
+  number: 1001
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -67,7 +67,8 @@ test:
 about:
   summary: 'A web service based tool to plan atmospheric research flights.'
   home: https://bitbucket.org/wxmetvis/mss
-  license: Apache 2.0
+  license: "Apache 2.0"
+  license_family: "APACHE"
   license_file: LICENSE
   description: |
     MSS - Mission Support System
