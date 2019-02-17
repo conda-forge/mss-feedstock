@@ -5,3 +5,4 @@ libXrender-devel
 libSM-devel
 libX11-devel
 mesa-libGL-devel
+mesa-libGL
