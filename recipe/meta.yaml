@@ -22,28 +22,11 @@ build:
     - demodata = mslib.mswms.demodata:main
 
 requirements:
-  build:
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
   host:
     - python
     - setuptools
     - future
     - menuinst  # [win]
-    - freetype  # [linux]
-    - fontconfig  # [linux]
-    - libxcb  # [linux]
-    - dbus  # [linux]
-    - xorg-libice      # [linux]
-    - xorg-libsm       # [linux]
-    - xorg-libx11      # [linux]
-    - xorg-libxext     # [linux]
-    - xorg-libxrender  # [linux]
-    - xorg-libxt       # [linux]
     - xorg-inputproto  # [linux]
   run:
     - python
@@ -74,16 +57,6 @@ requirements:
     - cftime >=1.0.1
     - matplotlib <3.0.0
     - proj4
-    - freetype  # [linux]
-    - fontconfig  # [linux]
-    - libxcb  # [linux]
-    - dbus  # [linux]
-    - xorg-libice      # [linux]
-    - xorg-libsm       # [linux]
-    - xorg-libx11      # [linux]
-    - xorg-libxext     # [linux]
-    - xorg-libxrender  # [linux]
-    - xorg-libxt       # [linux]
     - xorg-inputproto  # [linux]
 test:
   imports:
