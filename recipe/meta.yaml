@@ -27,12 +27,12 @@ requirements:
     - setuptools
     - future
     - menuinst  # [win]
-    - freetype        # [linux]
-    - xorg-libxaw     # [linux]
-    - xorg-libxpm     # [linux]
-    - xorg-libxfixes  # [linux]
-    - xorg-libxft     # [linux]
-    - mesa-libGL-devel  # [linux] 
+    - freetype           # [linux]
+    - libXext-devel      # [linux]
+    - libXrender-devel   # [linux]
+    - libSM-devel        # [linux]
+    - libX11-devel       # [linux]
+    - mesa-libGL-devel   # [linux]
   run:
     - python
     - menuinst  # [win]
@@ -62,12 +62,12 @@ requirements:
     - cftime >=1.0.1
     - matplotlib <3.0.0
     - proj4
-    - freetype         # [linux]
-    - xorg-libxaw      # [linux]
-    - xorg-libxpm      # [linux]
-    - xorg-libxfixes   # [linux]
-    - xorg-libxft      # [linux]
-    - mesa-libGL-devel   # [linux] 
+    - freetype           # [linux]
+    - libXext-devel      # [linux]
+    - libXrender-devel   # [linux]
+    - libSM-devel        # [linux]
+    - libX11-devel       # [linux]
+    - mesa-libGL-devel   # [linux]
 test:
   imports:
     - mslib
