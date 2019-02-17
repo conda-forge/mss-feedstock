@@ -1,3 +1,7 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About mss
 =========
 
@@ -26,8 +30,6 @@ and modified on these views. Exchange through a waypoint table is also possible.
 
 Current build status
 ====================
-
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/mss-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/mss-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/mss-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/mss-feedstock)
@@ -64,6 +66,8 @@ conda search mss --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
