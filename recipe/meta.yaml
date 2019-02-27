@@ -1,4 +1,4 @@
-{% set version = "1.7.4" %}
+{% set version = "1.7.5" %}
 
 package:
   name: mss
@@ -7,14 +7,14 @@ package:
 source:
   fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 15ceffb4ec1f046c691f03cbc25c1982a793dc04fae0add159289f98673cb932
+  sha256: 0ee1d643788262998dc72bac3de7e875a76841c0be3bcb16cb474518535b75b2
   patches:
     # os.environ["PROJ_LIB"]  is not set on a root environment
     - set_proj_lib_data_dir.patch
     - mswms_set_proj_lib_data_dir.patch
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
-  number: 1001
+  number: 0
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
