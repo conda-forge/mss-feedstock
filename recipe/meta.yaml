@@ -14,7 +14,7 @@ source:
     - mswms_set_proj_lib_data_dir.patch
     - mss_pyui_set_proj_lib_data_dir.patch
 build:
-  number: 0
+  number: 1
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -45,7 +45,7 @@ requirements:
     - requests
     - scipy
     - sgp4
-    - skyfield
+    - skyfiield >=1.10
     - six
     - tk
     - owslib
