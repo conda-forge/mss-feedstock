@@ -20,7 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - future  # [py2k]
+    - future
     - menuinst  # [win]
   run:
     - python
@@ -47,7 +47,7 @@ requirements:
     - owslib
     - unicodecsv
     - fs_filepicker
-    - future  # [py2k]
+    - future
     - cftime >=1.0.1
     - matplotlib <3.0.0
     - proj4 <6
