@@ -5,16 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  fn: mss-{{ version }}.tar.gz
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
   sha256: 0ee1d643788262998dc72bac3de7e875a76841c0be3bcb16cb474518535b75b2
-  patches:
-    # os.environ["PROJ_LIB"]  is not set on a root environment
-    - set_proj_lib_data_dir.patch
-    - mswms_set_proj_lib_data_dir.patch
-    - mss_pyui_set_proj_lib_data_dir.patch
+
 build:
-  number: 0
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -23,7 +19,7 @@ build:
 requirements:
   host:
     - python
-    - setuptools
+    - pip
     - future
     - menuinst  # [win]
   run:
@@ -37,7 +33,7 @@ requirements:
     - netcdf4
     - hdf4
     - paste
-    - pillow 5.*
+    - pillow >=5,<6
     - python-dateutil
     - pytz
     - pyqt
@@ -45,16 +41,16 @@ requirements:
     - requests
     - scipy
     - sgp4
-    - skyfield
+    - skyfield >=1.10
     - six
     - tk
     - owslib
     - unicodecsv
     - fs_filepicker
-    - future  # [py2k]
+    - future
     - cftime >=1.0.1
     - matplotlib <3.0.0
-    - proj4
+    - proj4 <6
 
 test:
   imports:
