@@ -1,4 +1,4 @@
-{% set version = "1.7.5" %}
+{% set version = "1.7.6" %}
 
 package:
   name: mss
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 0ee1d643788262998dc72bac3de7e875a76841c0be3bcb16cb474518535b75b2
+  sha256: 3435243991b101c252aa86a4c72f3105ee1ac2d0cc1f06165117ad37bed25293
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
