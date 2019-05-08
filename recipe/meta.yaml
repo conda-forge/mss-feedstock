@@ -9,7 +9,7 @@ source:
   sha256: 3435243991b101c252aa86a4c72f3105ee1ac2d0cc1f06165117ad37bed25293
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
