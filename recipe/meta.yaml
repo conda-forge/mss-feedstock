@@ -1,4 +1,4 @@
-{% set version = "1.7.6" %}
+{% set version = "1.8.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 3435243991b101c252aa86a4c72f3105ee1ac2d0cc1f06165117ad37bed25293
+  sha256: b5fdf69affcb84cd6c99050c26746cc670d1fb24c899cbf72b4addb1045b33bb
 
 build:
   number: 0
@@ -25,14 +25,14 @@ requirements:
   run:
     - python
     - menuinst  # [win]
-    - basemap >=1.1.0
+    - basemap >=1.2.0
     - chameleon
     - execnet
+    - isodate
     - jplephem
     - lxml
     - netcdf4
     - hdf4
-    - paste
     - pillow >=5,<6
     - python-dateutil
     - pytz
@@ -49,8 +49,11 @@ requirements:
     - fs_filepicker
     - future
     - cftime >=1.0.1
-    - matplotlib <3.0.0
+    - matplotlib >=3.0.2
     - proj4 <6
+    - flask
+    - flask-httpauth
+    - werkzeug
 
 test:
   imports:
