@@ -49,6 +49,7 @@ jobs:
 
       source run_conda_forge_build_setup
       conda update --yes --quiet --override-channels -c conda-forge -c defaults --all
+      conda install conda-build=3.17.8 --yes
     env: {
       OSX_FORCE_SDK_DOWNLOAD: "1"
     }
