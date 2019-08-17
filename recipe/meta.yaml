@@ -7,10 +7,10 @@ package:
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
   sha256: 18e614fb88028f8de6084a307deca5ad59e3691f16acecca523af11560c9b896
-  
+
 patches:
   - mss_pyui_set_proj_lib_data_dir.patch
-        
+
 build:
   skip: true  # [py27]
   number: 1
