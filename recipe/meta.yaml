@@ -10,7 +10,7 @@ source:
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
-        
+
 build:
   skip: true  # [py27]
   number: 1
