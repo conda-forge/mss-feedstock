@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.8.3" %}
 
 package:
   name: mss
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 18e614fb88028f8de6084a307deca5ad59e3691f16acecca523af11560c9b896
+  sha256: 44f3145c08824e08aa26d1ff7d865f67bc46d51e2e1d1da2536294b60b4ea65b
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py27]
-  number: 3
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
