@@ -7,11 +7,13 @@ Package license: Apache 2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: A web service based tool to plan atmospheric research flights.
+Summary: A QT application and a OGC web server to plan atmospheric research flights.
 
 MSS - Mission Support System
 
-http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
+Documentation:
+* https://mss.rtfd.io
+* http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
 
 Software for planning research Aircraft Missions.
 For discussion of the possibilites of the research flights,
