@@ -30,7 +30,7 @@ requirements:
     - future
     - menuinst  # [win]
   run:
-    - python >=3.6
+    - python
     - menuinst  # [win]
     - basemap >=1.2.0
     - chameleon
@@ -63,6 +63,7 @@ requirements:
     - psycopg2
     - validate_email
     - multidict
+    - pint
 
 test:
   imports:
