@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 810a6c420ba1e1c2fdec038d051ddfb8c95c8070f7a34fc55219d299d0182d9b
+  sha256: be95137162a3cda689a8f71b467d78c050bd750c0c59f602c7d9968943072f60
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
