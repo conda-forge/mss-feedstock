@@ -60,6 +60,7 @@ requirements:
     - flask-sqlalchemy
     - passlib
     - gitpython
+    - git
     - psycopg2
     - validate_email
     - multidict
