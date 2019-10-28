@@ -1,4 +1,4 @@
-{% set version = "1.8.3" %}
+{% set version = "1.9.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 44f3145c08824e08aa26d1ff7d865f67bc46d51e2e1d1da2536294b60b4ea65b
+  sha256: be95137162a3cda689a8f71b467d78c050bd750c0c59f602c7d9968943072f60
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
@@ -18,7 +18,10 @@ build:
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
-    - demodata = mslib.mswms.demodata:main
+    - mswms_demodata = mslib.mswms.demodata:main
+    - mscolab = mslib.mscolab.server:main
+    - mscolab_demodata = mslib.mscolab.demodata:main
+    - mscolab_add_permissions = mslib.mscolab.add_bulk_permissions:main
 
 requirements:
   host:
@@ -33,31 +36,35 @@ requirements:
     - chameleon
     - execnet
     - isodate
-    - jplephem
     - lxml
     - netcdf4
     - hdf4
     - pillow >=5,<6
-    - python-dateutil
     - pytz
-    - pyqt
-    - qt
+    - pyqt >=5,<6
+    - qt >=5,<6
     - requests
     - scipy
-    - sgp4
     - skyfield >=1.12
-    - six
     - tk
     - owslib
     - unicodecsv
     - fs_filepicker
-    - future
     - cftime >=1.0.1
     - matplotlib ==3.0.2
     - proj4 <6
     - flask
     - flask-httpauth
     - werkzeug
+    - flask-socketio
+    - flask-sqlalchemy
+    - passlib
+    - gitpython
+    - git
+    - psycopg2
+    - validate_email
+    - multidict
+    - pint
 
 test:
   imports:
@@ -65,9 +72,10 @@ test:
   commands:
     - mswms -h
     - mss -h
+    - mscolab_demodata -h
 
 about:
-  summary: 'A web service based tool to plan atmospheric research flights.'
+  summary: 'A QT application and a OGC web server to plan atmospheric research flights.'
   home: https://bitbucket.org/wxmetvis/mss
   license: "Apache 2.0"
   license_family: "APACHE"
@@ -75,7 +83,9 @@ about:
   description: |
     MSS - Mission Support System
 
-    http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
+    Documentation:
+    * https://mss.rtfd.io
+    * http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
 
     Software for planning research Aircraft Missions.
     For discussion of the possibilites of the research flights,
