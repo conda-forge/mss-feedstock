@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [py27]
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -51,7 +51,7 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - cftime >=1.0.1
-    - matplotlib ==3.0.2
+    - matplotlib-base ==3.0.2
     - proj4 <6
     - flask
     - flask-httpauth
