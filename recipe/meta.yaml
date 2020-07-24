@@ -12,7 +12,7 @@ source:
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  skip: true  # [py27,py38]
+  skip: true  # [py<=27 or py>=38]
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
