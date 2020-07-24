@@ -14,6 +14,9 @@ jobs:
       win_python3.7.____cpython:
         CONFIG: win_python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+      win_python3.8.____cpython:
+        CONFIG: win_python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
     maxParallel: 4
   timeoutInMinutes: 360
   variables:
@@ -98,6 +101,7 @@ jobs:
 
     - script: |
         set "GIT_BRANCH=%BUILD_SOURCEBRANCHNAME%"
+        set "FEEDSTOCK_NAME=%BUILD_REPOSITORY_NAME:*/=%"
         call activate base
         upload_package  .\ ".\recipe" .ci_support\%CONFIG%.yaml
       displayName: Upload package
