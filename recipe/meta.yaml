@@ -79,7 +79,7 @@ test:
 about:
   summary: 'A QT application and a OGC web server to plan atmospheric research flights.'
   home: https://bitbucket.org/wxmetvis/mss
-  license: "Apache 2.0"
+  license: "Apache-2.0"
   license_family: "APACHE"
   license_file: LICENSE
   description: |
