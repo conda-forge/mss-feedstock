@@ -1,4 +1,4 @@
-{% set version = "1.9.4" %}
+{% set version = "1.9.5" %}
 
 package:
   name: mss
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: d1be5d36cd88454346ff25660939580b8c9afa79ddc8ef0e73e2ce06d20de5d3
+  sha256: 4e2f50d5d471339514f2144128be9f0f286a145ff269472311ebe81feae6f655
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py<=27 or py>=38]
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -46,7 +46,7 @@ requirements:
     - qt >=5,<6
     - requests
     - scipy
-    - skyfield >=1.12,<1.24
+    - skyfield >=1.12
     - tk
     - owslib
     - unicodecsv
