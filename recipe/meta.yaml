@@ -14,7 +14,7 @@ source:
 build:
   skip: true  # [py<=27 or py>=38]
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -77,10 +77,10 @@ test:
     - mscolab_demodata -h
 
 about:
-  summary: 'A QT application and a OGC web server to plan atmospheric research flights.'
+  summary: A QT application and a OGC web server to plan atmospheric research flights.
   home: https://bitbucket.org/wxmetvis/mss
-  license: "Apache-2.0"
-  license_family: "APACHE"
+  license: Apache-2.0
+  license_family: APACHE
   license_file: LICENSE
   description: |
     MSS - Mission Support System
