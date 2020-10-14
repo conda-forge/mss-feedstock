@@ -5,7 +5,7 @@ Home: https://bitbucket.org/wxmetvis/mss
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mss-feedstock/blob/master/LICENSE.txt)
 
 Summary: A QT application and a OGC web server to plan atmospheric research flights.
 
