@@ -1,27 +1,25 @@
-{% set version = "1.9.5" %}
+{% set version = "2.0.0" %}
 
 package:
   name: mss
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/wxmetvis/mss/get/{{ version }}.tar.gz
-  sha256: 4e2f50d5d471339514f2144128be9f0f286a145ff269472311ebe81feae6f655
+  url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
+  sha256: 34eac72b69884d7f7f583dbe0bf21321672330c00f84c7592f8fd269aeeaec31
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  skip: true  # [py<=27 or py>=38]
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
     - mswms_demodata = mslib.mswms.demodata:main
-    - mscolab = mslib.mscolab.server:main
-    - mscolab_demodata = mslib.mscolab.demodata:main
-    - mscolab_add_permissions = mslib.mscolab.add_bulk_permissions:main
+    - mscolab = mslib.mscolab.mscolab:main
+    - mss_retriever = mslib.retriever:main
 
 requirements:
   host:
@@ -33,16 +31,18 @@ requirements:
     - python
     - defusedxml
     - menuinst  # [win]
-    - basemap >=1.2.0
+    - basemap  >1.2.1
     - chameleon
     - execnet
+    - fastkml
     - isodate
     - lxml
     - netcdf4
     - hdf4
-    - pillow >=5,<6
+    - pillow
     - pytz
     - pyqt >=5,<6
+    - pygeoif
     - qt >=5,<6
     - requests
     - scipy
@@ -52,8 +52,7 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - cftime >=1.0.1
-    - matplotlib ==3.0.2
-    - proj4 <6
+    - matplotlib >=3.3.2
     - flask
     - flask-httpauth
     - werkzeug
@@ -63,22 +62,29 @@ requirements:
     - gitpython
     - git
     - psycopg2
+    - PyMySQL >=0.9.3
     - validate_email
     - multidict
     - pint
     - python-socketio >=4.4.0
+    - markdown
+    - xstatic
+    - xstatic-jquery
+    - xstatic-bootstrap
+    - pyperclip
 
 test:
   imports:
     - mslib
   commands:
     - mswms -h
+    - mswms_demodata -h
     - mss -h
-    - mscolab_demodata -h
+    - mscolab -h
 
 about:
-  summary: 'A QT application and a OGC web server to plan atmospheric research flights.'
-  home: https://bitbucket.org/wxmetvis/mss
+  summary: 'A QT application, a OGC web map server, a collaboration server to plan atmospheric research flights.'
+  home: https://github.com/Open-MSS/MSS
   license: "Apache-2.0"
   license_family: "APACHE"
   license_file: LICENSE
