@@ -12,7 +12,7 @@ source:
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -56,7 +56,7 @@ requirements:
     - flask
     - flask-httpauth
     - werkzeug
-    - flask-socketio
+    - flask-socketio >=4.3.1, <5
     - flask-sqlalchemy
     - passlib
     - gitpython
@@ -66,7 +66,8 @@ requirements:
     - validate_email
     - multidict
     - pint
-    - python-socketio >=4.4.0
+    - python-socketio >=4.4.0, <5
+    - python-engineio >=3.13.2, <4
     - markdown
     - xstatic
     - xstatic-jquery
