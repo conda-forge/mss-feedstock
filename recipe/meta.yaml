@@ -12,7 +12,7 @@ source:
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -74,6 +74,8 @@ requirements:
     - xstatic-bootstrap
     - pyperclip
     - geos <3.9.0
+    - sqlalchemy  <1.4.0
+    - sqlite  <3.35.1
 
 test:
   imports:
