@@ -48,7 +48,7 @@ requirements:
     - scipy
     - skyfield >=1.12
     - tk
-    - owslib <= 0.21
+    - owslib <=0.21
     - unicodecsv
     - fs_filepicker
     - cftime >=1.0.1
