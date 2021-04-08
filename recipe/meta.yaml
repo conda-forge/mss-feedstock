@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: mss
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 315e1c268dfe27d8437f8e095db3cf2be0da1d915b0c8b242adbb7965649aeb2
+  sha256: c2193996f8a2b93164f9c9cbb7edc5893cfc000ba82fe244239b7bf3cab689ef
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
@@ -87,10 +87,10 @@ test:
     - mscolab -h
 
 about:
-  summary: 'A QT application, a OGC web map server, a collaboration server to plan atmospheric research flights.'
+  summary: A QT application, a OGC web map server, a collaboration server to plan atmospheric research flights.
   home: https://github.com/Open-MSS/MSS
-  license: "Apache-2.0"
-  license_family: "APACHE"
+  license: Apache-2.0
+  license_family: APACHE
   license_file: LICENSE
   description: |
     MSS - Mission Support System
