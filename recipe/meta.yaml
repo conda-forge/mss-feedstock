@@ -12,7 +12,7 @@ source:
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -48,7 +48,7 @@ requirements:
     - scipy
     - skyfield >=1.12
     - tk
-    - owslib
+    - owslib <=0.21
     - unicodecsv
     - fs_filepicker
     - cftime >=1.0.1
