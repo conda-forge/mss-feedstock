@@ -12,7 +12,7 @@ source:
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
@@ -55,7 +55,7 @@ requirements:
     - matplotlib >=3.3.2
     - flask
     - flask-httpauth
-    - werkzeug
+    - werkzeug <2.0.0
     - flask-socketio >=4.3.1, <5
     - flask-sqlalchemy
     - passlib
