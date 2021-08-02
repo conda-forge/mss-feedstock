@@ -1,4 +1,4 @@
-{% set version = "4.0.4" %}
+{% set version = "5.0.0" %}
 
 package:
   name: mss
@@ -6,12 +6,13 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 97ffc7c50eba1ecc1e5db856ed766776394225bb7030e4fabeca9a8d8405710a
+  sha256: 0de0093d0adb2cf7f1a1f25c2fcfd4cc54ed09e46b71636eca257031a56c57fa
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
+  skip: true  # [py==36]
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
@@ -80,6 +81,8 @@ requirements:
     - pyperclip
     - geos <3.9.0
     - gpxpy >=1.4.2
+    - metpy
+    - pycountry
 
 test:
   imports:
