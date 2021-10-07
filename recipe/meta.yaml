@@ -27,6 +27,7 @@ requirements:
     - pip
     - future
     - menuinst  # [win]
+    - chameleon
   run:
     - python
     - defusedxml
