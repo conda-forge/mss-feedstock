@@ -1,4 +1,4 @@
-{% set version = "5.0.2" %}
+{% set version = "6.0.0" %}
 
 package:
   name: mss
@@ -6,21 +6,20 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 25fb7d2e7473046e3c750388429ed1086aab77bfca2a27d39b7ca05c32e998c2 
+  sha256: 41535a622c5254c86cd4fef9872fcbe92b172885008f0d364939cadf9563dfef
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py==36]
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - mss = mslib.msui.mss_pyui:main
     - mswms = mslib.mswms.mswms:main
     - mswms_demodata = mslib.mswms.demodata:main
     - mscolab = mslib.mscolab.mscolab:main
-    - mss_retriever = mslib.retriever:main
 
 requirements:
   host:
@@ -42,9 +41,9 @@ requirements:
     - hdf4
     - pillow
     - pytz
-    - pyqt >=5,<6
+    - pyqt >=5, <6
     - pygeoif
-    - qt >=5.10,<6
+    - qt >=5.10, <6
     - requests
     - scipy
     - skyfield >=1.12
@@ -55,14 +54,12 @@ requirements:
     - fs_filepicker
     - cftime >=1.0.1
     - matplotlib >=3.3.2
-    - flask <2.0.0
-    - jinja2 <3.0.0
-    - click <8.0.0
-    - itsdangerous <2.0.0
-    - markupsafe <2.0.0
+    - flask >=2.0.0
     - flask-httpauth
-    - werkzeug <2.0.0
-    - flask-socketio >=4.3.1, <5
+    - flask-mail
+    - flask-migrate
+    - werkzeug >2.0.0
+    - flask-socketio >=5
     - flask-sqlalchemy
     - flask-cors
     - passlib
@@ -73,8 +70,8 @@ requirements:
     - validate_email
     - multidict
     - pint
-    - python-socketio >=4.4.0, <5
-    - python-engineio >=3.13.2, <4
+    - python-socketio >=5
+    - python-engineio >=4
     - markdown
     - xstatic
     - xstatic-jquery
