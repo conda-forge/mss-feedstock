@@ -1,4 +1,4 @@
-{% set version = "6.0.0" %}
+{% set version = "6.0.1" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 41535a622c5254c86cd4fef9872fcbe92b172885008f0d364939cadf9563dfef
+  sha256: 64574bbc336375bc43bb54e1896b327a9c6a6f223216d7207195f7a91086e10c
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
@@ -81,6 +81,7 @@ requirements:
     - gpxpy >=1.4.2
     - metpy
     - pycountry
+    - websocket-client
 
 test:
   imports:
