@@ -1,4 +1,4 @@
-{% set version = "6.0.6" %}
+{% set version = "6.1.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: e27aff26c4eb068fbba3f0a2f0ab762f42ae2d9679d7bb099839235944c3acc6
+  sha256: b73b0c40bbc97f3a2293492abcc13b13406045b8adae32265ce542d6a0e123f1
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
