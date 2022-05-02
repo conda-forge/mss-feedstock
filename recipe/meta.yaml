@@ -78,7 +78,6 @@ requirements:
     - xstatic-jquery
     - xstatic-bootstrap
     - pyperclip
-    - geos <3.9.0
     - gpxpy >=1.4.2
     - metpy
     - pycountry
