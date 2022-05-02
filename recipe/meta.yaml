@@ -1,4 +1,4 @@
-{% set version = "6.0.1" %}
+{% set version = "6.1.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 64574bbc336375bc43bb54e1896b327a9c6a6f223216d7207195f7a91086e10c
+  sha256: b73b0c40bbc97f3a2293492abcc13b13406045b8adae32265ce542d6a0e123f1
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
@@ -34,7 +34,7 @@ requirements:
     - basemap  >1.2.1
     - chameleon
     - execnet
-    - fastkml
+    - fastkml =0.11
     - isodate
     - lxml
     - netcdf4
@@ -47,19 +47,20 @@ requirements:
     - requests
     - scipy
     - skyfield >=1.12
-    - skyfield-data
+    - skyfield-data >=4
     - tk
     - owslib >=0.24
     - unicodecsv
     - fs_filepicker
     - cftime >=1.0.1
     - matplotlib >=3.3.2
+    - itsdangerous <2.1.0
     - flask >=2.0.0
     - flask-httpauth
     - flask-mail
     - flask-migrate
     - werkzeug >2.0.0
-    - flask-socketio >=5
+    - flask-socketio =5.1.0
     - flask-sqlalchemy
     - flask-cors
     - passlib
