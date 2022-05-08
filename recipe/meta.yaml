@@ -33,6 +33,7 @@ requirements:
     - menuinst  # [win]
     - basemap =1.2.2=py310hfa8993b_4
     - proj >=8.0.1,<8.0.2.0a0
+    - pyproj >=3.3.1
     - chameleon
     - execnet
     - fastkml =0.11
@@ -55,6 +56,7 @@ requirements:
     - fs_filepicker
     - cftime >=1.0.1
     - matplotlib >=3.3.2
+    - matplotlib-base >=3.5.2
     - itsdangerous <2.1.0
     - flask >=2.0.0
     - flask-httpauth
