@@ -32,6 +32,7 @@ requirements:
     - defusedxml
     - menuinst  # [win]
     - basemap =1.2.2=py310hfa8993b_4
+    - cartopy >=0.20.2
     - chameleon
     - execnet
     - fastkml =0.11
