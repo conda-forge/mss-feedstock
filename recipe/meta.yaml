@@ -36,6 +36,7 @@ requirements:
     - pyproj >=3.3.1
     - geos >=3.9.1
     - shapely >=1.7.0
+    - cartopy >=0.20.1
     - chameleon
     - execnet
     - fastkml =0.11
