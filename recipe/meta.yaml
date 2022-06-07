@@ -1,4 +1,4 @@
-{% set version = "6.2.0" %}
+{% set version = "6.2.1" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 5d6eea0c4dfa71b755eb83498a506bd5228cae826c2370f2b26f679daf2271f9
+  sha256: f89556ac7262b66487ed40854cf34fd343b65ef8074f722d047a1bdc1972ac05 
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
@@ -43,7 +43,7 @@ requirements:
     - pytz
     - pyqt >=5, <6
     - pygeoif
-    - qt >=5.10, <6
+    - qt >=5.10, <5.13
     - requests
     - scipy
     - skyfield >=1.12
