@@ -1,4 +1,4 @@
-{% set version = "6.2.1" %}
+{% set version = "7.0.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: f89556ac7262b66487ed40854cf34fd343b65ef8074f722d047a1bdc1972ac05 
+  sha256: 521280022ca3baff867968e4c44e6e70cbc4408bf02abf1dffbefa6c52d6a1c6
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - mss_pyui_set_proj_lib_data_dir.patch
@@ -16,7 +16,7 @@ build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
-    - mss = mslib.msui.mss_pyui:main
+    - msui = mslib.msui.msui:main
     - mswms = mslib.mswms.mswms:main
     - mswms_demodata = mslib.mswms.demodata:main
     - mscolab = mslib.mscolab.mscolab:main
@@ -41,7 +41,7 @@ requirements:
     - hdf4
     - pillow
     - pytz
-    - pyqt >=5, <6
+    - pyqt >=5, <5.13
     - pygeoif
     - qt >=5.10, <5.13
     - requests
@@ -88,11 +88,11 @@ test:
   commands:
     - mswms -h
     - mswms_demodata -h
-    - mss -h
+    - msui -h
     - mscolab -h
 
 about:
-  summary: 'A QT application, a OGC web map server, a collaboration server to plan atmospheric research flights.'
+  summary: 'A client/server application developed in the community to collaboratively create flight plans based on model data.'
   home: https://github.com/Open-MSS/MSS
   license: "Apache-2.0"
   license_family: "APACHE"
