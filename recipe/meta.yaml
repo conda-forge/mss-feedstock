@@ -9,7 +9,7 @@ source:
   sha256: 521280022ca3baff867968e4c44e6e70cbc4408bf02abf1dffbefa6c52d6a1c6
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
-    - mss_pyui_set_proj_lib_data_dir.patch
+    - msui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py<38]
