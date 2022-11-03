@@ -1,4 +1,4 @@
-{% set version = "7.0.5" %}
+{% set version = "7.0.6" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: de6c828e06745431e200d000956e146f30c1dbf88fc8eb1a7b169ab803a66fa9 
+  sha256: 79d326a4e3f00e6f346527394f9eadb3c08385959d00b679da68f3c6f48600fd 
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
@@ -54,7 +54,7 @@ requirements:
     - unicodecsv
     - fs_filepicker
     - cftime >=1.0.1
-    - matplotlib >=3.3.2
+    - matplotlib >=3.3.2,<3.6
     - itsdangerous <2.1.0
     - flask >=2.0.0,<2.2.0
     - flask-httpauth
@@ -71,7 +71,7 @@ requirements:
     - PyMySQL >=0.9.3
     - validate_email
     - multidict
-    - pint
+    - pint <0.20
     - python-socketio >=5
     - python-engineio >=4
     - markdown
