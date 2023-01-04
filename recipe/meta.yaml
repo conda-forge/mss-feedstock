@@ -85,6 +85,7 @@ requirements:
     - shapely <2.0.0
     - pygeoif <1.0.0
     - metpy <1.4.0
+    - pyproj <3.4.0
 
 test:
   imports:
