@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [py<38]
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - msui = mslib.msui.msui:main
@@ -82,6 +82,9 @@ requirements:
     - metpy
     - pycountry
     - websocket-client
+    - shapely <2.0.0
+    - pygeoif <1.0.0
+    - metpy <1.4.0
 
 test:
   imports:
