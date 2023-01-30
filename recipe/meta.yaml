@@ -27,6 +27,7 @@ requirements:
     - python
     - pip 
     - setuptools <67.0.0
+    - mamba <1.2.0
   host:
     - python
     - pip
