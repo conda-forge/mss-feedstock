@@ -23,10 +23,11 @@ build:
     - mscolab = mslib.mscolab.mscolab:main
 
 requirements:
+  build:
+    - setuptools
   host:
     - python
     - pip
-    - setuptools <67.0.0
     - future
     - menuinst  # [win]
   run:
