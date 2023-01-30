@@ -26,9 +26,8 @@ build:
 requirements:
   build:
     - python
-    - pip 
-    - setuptools <67.0.0
-    - mamba <1.2.0
+    - pip
+    - setuptools
   host:
     - python
     - pip
