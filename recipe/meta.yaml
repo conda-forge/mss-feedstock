@@ -26,9 +26,10 @@ requirements:
   build:
     - python
     - pip 
-    - setuptools <66.0.0
+    - setuptools ==65.5.1
   host:
     - python
+    - setuptools ==65.5.1
     - pip
     - future
     - menuinst  # [win]
