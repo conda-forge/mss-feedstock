@@ -10,6 +10,7 @@ source:
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
+    - version.patch
 
 build:
   skip: true  # [py<38]

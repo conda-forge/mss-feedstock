@@ -1,0 +1,9 @@
+diff -ruN -x __pycache__ -x obj -x '*~' -x tags -x TAGS MSS-7.0.7.orig/mslib/version.py MSS-7.0.7/mslib/version.py
+--- MSS-7.0.7.orig/mslib/version.py	2022-12-07 18:16:45.000000000 +0100
++++ MSS-7.0.7/mslib/version.py	2023-01-30 15:46:44.944598202 +0100
+@@ -24,4 +24,4 @@
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ """
+-__version__ = u'7.0.7.'
++__version__ = u'7.0.7'
