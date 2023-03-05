@@ -1,11 +1,11 @@
-About mss
-=========
+About mss-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mss-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Open-MSS/MSS
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mss-feedstock/blob/main/LICENSE.txt)
 
 Summary: A client/server application developed in the community to collaboratively create flight plans based on model data.
 
