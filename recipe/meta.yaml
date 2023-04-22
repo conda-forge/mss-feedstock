@@ -1,4 +1,4 @@
-{% set version = "7.0.8" %}
+{% set version = "8.0.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 726a6a6a1434d910232df413a57b0d0e12063efaeae9197ed480a715b013c5af
+  sha256: cbeb8980250da8c6c1972cbca5cbb8f980c08bc10d3bff50f3166bcd28299591
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
@@ -21,6 +21,7 @@ build:
     - mswms = mslib.mswms.mswms:main
     - mswms_demodata = mslib.mswms.demodata:main
     - mscolab = mslib.mscolab.mscolab:main
+    - mssautoplot = mslib.utils.mssautoplot:main
 
 requirements:
   build:
@@ -61,15 +62,15 @@ requirements:
     - fs_filepicker
     - cftime >=1.0.1
     - matplotlib >=3.3.2,<3.6
-    - itsdangerous <2.1.0
-    - flask >=2.0.0,<2.2.0
+    - itsdangerous
+    - pyjwt
+    - flask >=2.2.0
     - flask-httpauth
     - flask-mail
     - flask-migrate
-    - sqlalchemy <2.0.0
     - werkzeug >=2.2.3
     - flask-socketio =5.1.0
-    - flask-sqlalchemy
+    - flask-sqlalchemy >=3.0.0
     - flask-cors
     - passlib
     - gitpython
@@ -90,6 +91,9 @@ requirements:
     - pycountry
     - websocket-client
     - libtiff <4.5.0
+    - flask-wtf
+    - email_validator
+    - keyring
 
 test:
   imports:
@@ -99,6 +103,7 @@ test:
     - mswms_demodata -h
     - msui -h
     - mscolab -h
+    - mssautoplot --help
 
 about:
   summary: 'A client/server application developed in the community to collaboratively create flight plans based on model data.'
@@ -111,6 +116,7 @@ about:
 
     Documentation:
     * https://mss.rtfd.io
+    * https://gmd.copernicus.org/articles/15/8983/2022/gmd-15-8983-2022.pdf
     * http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
 
     Software for planning research Aircraft Missions.
