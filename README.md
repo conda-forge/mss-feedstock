@@ -13,6 +13,7 @@ MSS - Mission Support System
 
 Documentation:
 * https://mss.rtfd.io
+* https://gmd.copernicus.org/articles/15/8983/2022/gmd-15-8983-2022.pdf
 * http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
 
 Software for planning research Aircraft Missions.
