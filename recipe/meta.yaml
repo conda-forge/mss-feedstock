@@ -1,4 +1,4 @@
-{% set version = "8.0.1" %}
+{% set version = "8.1.0" %}
 
 package:
   name: mss
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: a9e2a129a5a51d0de38d31ea7f57613b89cca9322534ed3ba337f81bc2a240f9
+  sha256: 71f5f7732199c68e1c3ad662261d83ce21f6860e0f35f896158d72917fd67d83
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py<38]
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - msui = mslib.msui.msui:main
@@ -64,7 +64,7 @@ requirements:
     - matplotlib >=3.3.2,<3.6
     - itsdangerous
     - pyjwt
-    - flask >=2.2.0
+    - flask >=2.3.2
     - flask-httpauth
     - flask-mail
     - flask-migrate
