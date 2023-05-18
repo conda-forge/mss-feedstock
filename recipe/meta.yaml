@@ -1,4 +1,4 @@
-{% set version = "8.1.0" %}
+{% set version = "8.1.1" %}
 
 package:
   name: mss
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 71f5f7732199c68e1c3ad662261d83ce21f6860e0f35f896158d72917fd67d83
+  sha256: 3860658b00838a597f12a3b0993a5b8d47dab8d8e0f1f714ca4a1ff992dc990f
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py>310]
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - msui = mslib.msui.msui:main
@@ -79,7 +79,7 @@ requirements:
     - PyMySQL >=0.9.3
     - validate_email
     - multidict
-    - pint =0.20.1
+    - pint
     - python-socketio >=5
     - python-engineio >=4
     - markdown
