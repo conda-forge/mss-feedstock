@@ -12,7 +12,7 @@ source:
     - msui_set_proj_lib_data_dir.patch
 
 build:
-  skip: true  # [py>311]
+  skip: true  # [py>310]
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
