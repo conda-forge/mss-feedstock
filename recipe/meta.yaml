@@ -1,4 +1,4 @@
-{% set version = "8.1.1" %}
+{% set version = "8.2.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 3860658b00838a597f12a3b0993a5b8d47dab8d8e0f1f714ca4a1ff992dc990f
+  sha256: 9008d230dc372d9db4102426bcb1de41103b5d6daecd1166384c6252fb27f455
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
@@ -52,7 +52,7 @@ requirements:
     - pytz
     - pyqt >=5, <5.13
     - qt >=5.10, <5.13
-    - requests
+    - requests >=2.31.0
     - scipy
     - skyfield >=1.12
     - skyfield-data >=5
