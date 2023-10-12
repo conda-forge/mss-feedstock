@@ -1,4 +1,4 @@
-{% set version = "8.3.1" %}
+{% set version = "8.3.2" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 12beba2ed6ad01cf5076ce305a72f44bb573338cacfa96ca0da73ca06b255f4b
+  sha256: 0ebda4bb290b32faa7f9c79b75eafaaa75041e23202bbaf429259cf115e111c8
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
@@ -68,7 +68,7 @@ requirements:
     - flask-httpauth
     - flask-mail
     - flask-migrate
-    - werkzeug >=2.2.3
+    - werkzeug >=2.2.3,<3.0.0
     - flask-socketio =5.1.0
     - flask-sqlalchemy >=3.0.0
     - flask-cors
