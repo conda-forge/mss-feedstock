@@ -1,4 +1,4 @@
-{% set version = "8.3.2" %}
+{% set version = "8.3.3" %}
 
 package:
   name: mss
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 0ebda4bb290b32faa7f9c79b75eafaaa75041e23202bbaf429259cf115e111c8
+  sha256: 876c44c03d4d00a4afad43eacb28ca598eefb0c09b7180238c7f10bffe77ed0b 
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
 
 build:
   skip: true  # [py>310]
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
   entry_points:
     - msui = mslib.msui.msui:main
