@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 876c44c03d4d00a4afad43eacb28ca598eefb0c09b7180238c7f10bffe77ed0b 
+  sha256: 876c44c03d4d00a4afad43eacb28ca598eefb0c09b7180238c7f10bffe77ed0b
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
@@ -26,7 +26,7 @@ build:
 requirements:
   build:
     - python
-    - pip 
+    - pip
     - setuptools
   host:
     - python
