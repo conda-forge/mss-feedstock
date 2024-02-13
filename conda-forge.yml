@@ -1,5 +1,7 @@
 provider:
   win: azure
+  osx: azure
+  linux: azure
 conda_forge_output_validation: true
 github:
   branch_name: main
@@ -9,4 +11,7 @@ conda_build:
 
 build_platform:
   osx_arm64: osx_64
+  linux_aarch64: linux_64
+  linux_ppc64le: linux_64
+
 test: native_and_emulated
