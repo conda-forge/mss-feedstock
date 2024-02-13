@@ -25,10 +25,10 @@ build:
 
 requirements:
   build:
-    - python
-    - cross-python_{{ target_platform }}
-    - cython >=0.29,<3.1
-    - numpy >=1.21
+    - python                              # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - cython >=0.29,<3.1                  # [build_platform != target_platform]
+    - numpy >=1.21                        # [build_platform != target_platform]
     - pip 
     - setuptools
   host:
