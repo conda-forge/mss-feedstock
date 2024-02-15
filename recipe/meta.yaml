@@ -117,7 +117,15 @@ outputs:
         - email_validator
         - keyring
         - dbus-python  # [linux]
-
+    test:
+      imports:
+        - mslib
+      commands:
+        - mswms -h
+        - mswms_demodata -h
+        - msui -h
+        - mscolab -h
+        - mssautoplot --help
     about:
       summary: 'A client/server application developed in the community to collaboratively create flight plans based on model data.'
       home: https://github.com/Open-MSS/MSS
@@ -126,12 +134,12 @@ outputs:
       license_file: LICENSE
       description: |
         MSS - Mission Support System
-    
+
         Documentation:
         * https://mss.rtfd.io
         * https://gmd.copernicus.org/articles/15/8983/2022/gmd-15-8983-2022.pdf
         * http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
-    
+
         Software for planning research Aircraft Missions.
         For discussion of the possibilites of the research flights,
         the Mission Support System (MSS) was developed.
@@ -144,7 +152,7 @@ outputs:
       dev_url: https://github.com/open-mss/MSS
       doc_url: https://mss.readthedocs.io/en/stable/
 
-  - name: mss-mswms
+  - name: mss-wms
     version: {{ mswms_version }}
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
@@ -208,6 +216,13 @@ outputs:
         - pycountry
         - libtiff <4.5.0
         - flask-wtf
+    test:
+      imports:
+        - mslib
+      commands:
+        - mswms -h
+        - mswms_demodata -h
+        - mssautoplot --help
     about:
       summary: 'A wms server application developed in the community to collaboratively work on model data.'
       home: https://github.com/Open-MSS/MSS
@@ -278,6 +293,11 @@ outputs:
         - websocket-client
         - libtiff <4.5.0
         - flask-wtf
+    test:
+      imports:
+        - mslib
+      commands:
+        - mscolab -h
     about:
       summary: 'A wms server application developed in the community to collaboratively work on model data.'
       home: https://github.com/Open-MSS/MSS
@@ -286,6 +306,78 @@ outputs:
       license_file: LICENSE
       dev_url: https://github.com/open-mss/MSS
       doc_url: https://mss.readthedocs.io/en/stable/
+
+  - name: mss-msui
+    version: {{ version }}
+    script: build-mss.sh  # [not win]
+    script: bld-mss.bat  # [win]
+    build:
+      number: {{ build_number }}
+      entry_points:
+        - msui = mslib.msui.msui:main
+        - mss = mslib.msui.mss:main
+        - mssautoplot = mslib.utils.mssautoplot:main
+    requirements:
+      build:
+        - python                              # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+        - cython >=0.29,<3.1                  # [build_platform != target_platform]
+        - numpy >=1.21                        # [build_platform != target_platform]
+        - pip
+        - setuptools
+      host:
+        - python
+        - setuptools
+        - pip
+        - future
+        - menuinst  # [win]
+      run:
+        - python
+        - defusedxml
+        - menuinst  # [win]
+        - basemap >=1.3.3
+        - fastkml =0.11
+        - shapely <2.0.0
+        - pygeoif <1.0.0
+        - lxml
+        - pillow
+        - pytz
+        - pyqt >=5, <5.13
+        - qt >=5.10, <5.13
+        - requests >=2.31.0
+        - skyfield >=1.12
+        - skyfield-data >=5
+        - owslib >=0.24
+        - fs_filepicker
+        - matplotlib >=3.3.2,<3.6
+        - werkzeug >=2.2.3,<3.0.0
+        - flask-socketio =5.1.0
+        - multidict
+        - pint <=0.22
+        - python-socketio >=5
+        - python-engineio >=4
+        - markdown
+        - gpxpy >=1.4.2
+        - pycountry
+        - websocket-client
+        - libtiff <4.5.0
+        - keyring
+        - dbus-python  # [linux]
+    test:
+      imports:
+        - mslib
+      commands:
+        - msui -h
+        - mssautoplot --help
+    about:
+      summary: 'msui client application developed in the community to collaboratively create flight plans based on model data.'
+      home: https://github.com/Open-MSS/MSS
+      license: "Apache-2.0"
+      license_family: "APACHE"
+      license_file: LICENSE
+      dev_url: https://github.com/open-mss/MSS
+      doc_url: https://mss.readthedocs.io/en/stable/
+
 
 about:
   home: https://github.com/open-mss/MSS

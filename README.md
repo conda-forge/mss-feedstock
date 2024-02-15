@@ -57,8 +57,21 @@ Development: https://github.com/open-mss/MSS
 
 Documentation: https://mss.readthedocs.io/en/stable/
 
-About mss-mswms
----------------
+About mss-msui
+--------------
+
+Home: https://github.com/Open-MSS/MSS
+
+Package license: Apache-2.0
+
+Summary: msui client application developed in the community to collaboratively create flight plans based on model data.
+
+Development: https://github.com/open-mss/MSS
+
+Documentation: https://mss.readthedocs.io/en/stable/
+
+About mss-wms
+-------------
 
 Home: https://github.com/Open-MSS/MSS
 
@@ -84,7 +97,8 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-mss-green.svg)](https://anaconda.org/conda-forge/mss) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mss.svg)](https://anaconda.org/conda-forge/mss) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mss.svg)](https://anaconda.org/conda-forge/mss) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mss.svg)](https://anaconda.org/conda-forge/mss) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-mss--mscolab-green.svg)](https://anaconda.org/conda-forge/mss-mscolab) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mss-mscolab.svg)](https://anaconda.org/conda-forge/mss-mscolab) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mss-mscolab.svg)](https://anaconda.org/conda-forge/mss-mscolab) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mss-mscolab.svg)](https://anaconda.org/conda-forge/mss-mscolab) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-mss--mswms-green.svg)](https://anaconda.org/conda-forge/mss-mswms) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mss-mswms.svg)](https://anaconda.org/conda-forge/mss-mswms) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mss-mswms.svg)](https://anaconda.org/conda-forge/mss-mswms) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mss-mswms.svg)](https://anaconda.org/conda-forge/mss-mswms) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mss--msui-green.svg)](https://anaconda.org/conda-forge/mss-msui) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mss-msui.svg)](https://anaconda.org/conda-forge/mss-msui) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mss-msui.svg)](https://anaconda.org/conda-forge/mss-msui) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mss-msui.svg)](https://anaconda.org/conda-forge/mss-msui) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mss--wms-green.svg)](https://anaconda.org/conda-forge/mss-wms) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mss-wms.svg)](https://anaconda.org/conda-forge/mss-wms) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mss-wms.svg)](https://anaconda.org/conda-forge/mss-wms) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mss-wms.svg)](https://anaconda.org/conda-forge/mss-wms) |
 
 Installing mss-split
 ====================
@@ -96,16 +110,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mss, mss-mscolab, mss-mswms` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `mss, mss-mscolab, mss-msui, mss-wms` can be installed with `conda`:
 
 ```
-conda install mss mss-mscolab mss-mswms
+conda install mss mss-mscolab mss-msui mss-wms
 ```
 
 or with `mamba`:
 
 ```
-mamba install mss mss-mscolab mss-mswms
+mamba install mss mss-mscolab mss-msui mss-wms
 ```
 
 It is possible to list all of the versions of `mss` available on your platform with `conda`:
