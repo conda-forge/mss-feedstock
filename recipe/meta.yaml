@@ -22,7 +22,6 @@ build:
   skip: true  # [py>310]
   number: {{ build_number }}
 
-
 requirements:
   build:
     - m2-patch  # [win]
@@ -32,7 +31,7 @@ outputs:
 
   - name: mss
     version: {{ version }}
-    script: build-mss.sh  # [not win]
+    script: "{{ PYTHON }} -m pip install . --no-deps -vvv"  # [not win]
     script: bld-mss.bat  # [win]
     build:
       skip: true  # [py>310]

@@ -18,13 +18,13 @@ case "${PKG_NAME}" in
         ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv  packages/mss
     ;;
     mss-wms)
-        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv packages/mss-wms
+        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv packages/mss_wms
     ;;
     mss-mscolab)
-        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv packages/mss-mscolab
+        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv packages/mss_mscolab
     ;;
     mss-msui)
-        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv packages/mss-msui
+        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv packages/mss_msui
     ;;
     *)
         echo "No build instructions for ${PKG_NAME}"
