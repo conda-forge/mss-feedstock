@@ -31,7 +31,6 @@ requirements:
 outputs:
 
   - name: mss
-    skip: true  # [py>310]
     version: {{ version }}
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
@@ -156,7 +155,6 @@ outputs:
       doc_url: https://mss.readthedocs.io/en/stable/
 
   - name: mss-wms
-    skip: true  # [py>310]
     version: {{ mswms_version }}
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
@@ -238,7 +236,6 @@ outputs:
       doc_url: https://mss.readthedocs.io/en/stable/
 
   - name: mss-mscolab
-    skip: true  # [py>310]
     version: {{ mscolab_version }}
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
@@ -315,7 +312,6 @@ outputs:
       doc_url: https://mss.readthedocs.io/en/stable/
 
   - name: mss-msui
-    skip: true  # [py>310]
     version: {{ version }}
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
