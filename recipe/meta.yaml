@@ -31,7 +31,7 @@ outputs:
 
   - name: mss
     version: {{ version }}
-    script: "{{ PYTHON }} -m pip install . --no-deps -vvv"  # [not win]
+    script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
     build:
       skip: true  # [py>310]
