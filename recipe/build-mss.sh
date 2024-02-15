@@ -15,13 +15,16 @@ fi
 
 case "${PKG_NAME}" in
     mss)
-        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv --record record.txt packages/mss
+        ${PYTHON} -m pip install . --no-deps --ignore-installed --record record.txt -vvv  packages/mss
     ;;
-    mss-mswms)
-        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv --record record.txt packages/mss-mswms
+    mss-wms)
+        ${PYTHON} -m pip install . --no-deps --ignore-installed --record record.txt -vvv packages/mss-wms
     ;;
     mss-mscolab)
-        ${PYTHON} -m pip install . --no-deps --ignore-installed -vvv --record record.txt packages/mss-mscolab
+        ${PYTHON} -m pip install . --no-deps --ignore-installed --record record.txt -vvv packages/mss-mscolab
+    ;;
+    mss-msui)
+        ${PYTHON} -m pip install . --no-deps --ignore-installed --record record.txt -vvv packages/mss-msui
     ;;
     *)
         echo "No build instructions for ${PKG_NAME}"

@@ -20,7 +20,7 @@ source:
 
 build:
   number: {{ build_number }}
-  skip: true  # [py>310]
+
 
 requirements:
   build:
@@ -35,6 +35,7 @@ outputs:
     script: bld-mss.bat  # [win]
     build:
       number: {{ build_number }}
+      skip: true  # [py>310]
       entry_points:
         - msui = mslib.msui.msui:main
         - mss = mslib.msui.mss:main
@@ -157,6 +158,7 @@ outputs:
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
     build:
+      skip: true  # [py>310]
       number: {{ mswms_build_number }}
       entry_points:
         - mswms = mslib.mswms.mswms:main
@@ -237,6 +239,7 @@ outputs:
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
     build:
+      skip: true  # [py>310]
       number: {{ mscolab_build_number }}
       entry_points:
         - mscolab = mslib.mscolab.mscolab:main
@@ -312,6 +315,7 @@ outputs:
     script: build-mss.sh  # [not win]
     script: bld-mss.bat  # [win]
     build:
+      skip: true  # [py>310]
       number: {{ build_number }}
       entry_points:
         - msui = mslib.msui.msui:main
