@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 614fb3c4dddbce46415cc9a21501128894bb0b5d0a603a75d55a7dd656590402 
+  sha256: 614fb3c4dddbce46415cc9a21501128894bb0b5d0a603a75d55a7dd656590402
   patches:
     # start without environment by a application menu needs a PROJ_LIB env too
     - msui_set_proj_lib_data_dir.patch
@@ -29,7 +29,7 @@ requirements:
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29,<3.1                  # [build_platform != target_platform]
     - numpy >=1.21                        # [build_platform != target_platform]
-    - pip 
+    - pip
     - setuptools
   host:
     - python
