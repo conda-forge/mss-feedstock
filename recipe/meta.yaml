@@ -12,6 +12,7 @@ source:
     - msui_set_proj_lib_data_dir.patch
 
 build:
+  skip: true  # [py<312, py>39]
   number: 0
 
 requirements:
