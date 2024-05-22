@@ -12,7 +12,8 @@ source:
     - msui_set_proj_lib_data_dir.patch
 
 build:
-  skip: true  # [py<310 or py>310 and py<311 or py>311]
+  skip: true  # [py<310]
+  skip: true  # [py>=312]
   number: 0
 
 requirements:
