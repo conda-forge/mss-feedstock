@@ -1,4 +1,4 @@
-{% set version = "9.0.0" %}
+{% set version = "9.1.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 5061bb261dc2c1c55d98a01c0c610e5efee2378150157dcd0a016f2f9610b7b5
+  sha256: d2712cfee948623e94a35a276200a142f39cfc36f15fa9886848d27906bd5f8e
 
 build:
   skip: true  # [py<310]
@@ -49,7 +49,7 @@ requirements:
     - requests >=2.31.0
     - scipy
     - skyfield >=1.12
-    - skyfield-data >=5
+    - skyfield-data >=6
     - tk
     - owslib >=0.24
     - unicodecsv
@@ -122,7 +122,7 @@ about:
     * http://www.geosci-model-dev.net/5/55/2012/gmd-5-55-2012.pdf
 
     Software for planning research Aircraft Missions.
-    For discussion of the possibilites of the research flights,
+    For discussion of the possibilities of the research flights,
     the Mission Support System (MSS) was developed.
     This software helps to review a big amount of metereological and
     model data by viewing the forecasted parameters of interest along possible regions
