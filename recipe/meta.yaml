@@ -1,4 +1,4 @@
-{% set version = "9.1.0" %}
+{% set version = "9.2.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: d2712cfee948623e94a35a276200a142f39cfc36f15fa9886848d27906bd5f8e
+  sha256: 0d87cb1d018918b1c0ce368de1e406d9673792643ae4c505358fda863c352cd9
 
 build:
   skip: true  # [py<310]
@@ -84,7 +84,7 @@ requirements:
     - metpy
     - pycountry
     - websocket-client
-    - libtiff <4.5.0
+    - libtiff
     - flask-wtf
     - email_validator
     - keyring
