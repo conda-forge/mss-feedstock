@@ -1,4 +1,4 @@
-{% set version = "9.2.0" %}
+{% set version = "9.3.0" %}
 
 package:
   name: mss
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 0d87cb1d018918b1c0ce368de1e406d9673792643ae4c505358fda863c352cd9
+  sha256: 86117b995dd06685b1903b89cffe47090c3c6563e698ca908104420731afad6a
 
 build:
   skip: true  # [py<310]
