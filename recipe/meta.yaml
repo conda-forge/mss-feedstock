@@ -1,4 +1,4 @@
-{% set version = "9.3.0" %}
+{% set version = "9.3.1" %}
 
 package:
   name: mss
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: 86117b995dd06685b1903b89cffe47090c3c6563e698ca908104420731afad6a
+  sha256: 8a4066a1334f4515b706b010176910e074afed9c43efd6eac87c114696ed89b1
 
 build:
   skip: true  # [py<310]
   skip: true  # [py>=312]
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -94,6 +94,7 @@ requirements:
     - flask-login
     - pysaml2
     - libxmlsec1  # [not win]
+    - numpy <2.0
   run_constrained:
     - menuinst >=2.0.2
 
