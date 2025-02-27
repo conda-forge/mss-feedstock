@@ -11,7 +11,7 @@ source:
 build:
   skip: true  # [py<310]
   skip: true  # [py>=312]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -22,13 +22,11 @@ requirements:
     - pip 
     - setuptools
     - future
-    - menuinst >=2.0.2
   host:
     - python
     - setuptools
     - pip
     - future
-    - menuinst >=2.0.2
   run:
     - python
     - numpy >=2
@@ -94,8 +92,6 @@ requirements:
     - flask-login
     - pysaml2
     - libxmlsec1  # [not win]
-  run_constrained:
-    - menuinst >=2.0.2
 
 test:
   imports:
