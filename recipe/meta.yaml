@@ -1,4 +1,4 @@
-{% set version = "10.0.1" %}
+{% set version = "10.1.0" %}
 
 package:
   name: mss
@@ -6,19 +6,19 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: fc056987a779427b575a408a158f656b89e7869bc8f691441e96349fd7837b8f
+  sha256: b04ff67c7394fd42c379ca1979f3c947a6c09b8f28e21de5e2c203c1f8f4037b
 
 build:
   skip: true  # [py<310]
   skip: true  # [py>=312]
-  number: 1
+  number: 0
 
 requirements:
   build:
     - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29,<3.1                  # [build_platform != target_platform]
-    - numpy >=2                            # [build_platform != target_platform]
+    - numpy >=2                           # [build_platform != target_platform]
     - pip 
     - setuptools
     - future
