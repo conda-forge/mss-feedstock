@@ -11,7 +11,7 @@ source:
 build:
   skip: true  # [py<310]
   skip: true  # [py>=312]
-  number: 2
+  number: 1
 
 requirements:
   build:
@@ -22,10 +22,8 @@ requirements:
     - pip 
     - setuptools
     - future
-    - menuinst >=2.0.2
   host:
     - python
-    - menuinst >=2.0.2
     - setuptools
     - pip
     - future
