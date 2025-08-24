@@ -12,8 +12,8 @@ source:
     - remove_execfile.patch
 
 build:
-  skip: true  # [py>313]
-  number: 4
+  skip: true  # [py>312]
+  number: 3
 
 requirements:
   build:
