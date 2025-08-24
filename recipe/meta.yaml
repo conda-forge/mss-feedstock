@@ -7,6 +7,9 @@ package:
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
   sha256: b04ff67c7394fd42c379ca1979f3c947a6c09b8f28e21de5e2c203c1f8f4037b
+  patches:
+    # remove execfile
+    - remove_execfile.patch
 
 build:
   skip: true  # [py<310]
