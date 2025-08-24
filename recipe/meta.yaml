@@ -12,7 +12,7 @@ source:
     - remove_execfile.patch
 
 build:
-  skip: true  # [py<313]
+  skip: true  # [py>313]
   number: 4
 
 requirements:
@@ -51,7 +51,7 @@ requirements:
     - tk
     - owslib >=0.24
     - unicodecsv
-    - fs_filepicker
+    - fs_filepicker >=0.3.9
     - cftime >=1.0.1
     - matplotlib >=3.5.3
     - itsdangerous
