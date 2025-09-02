@@ -10,7 +10,7 @@ source:
 
 build:
   skip: true  # [py>312]
-  number: 3
+  number: 0
 
 requirements:
   build:
