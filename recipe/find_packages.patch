@@ -1,0 +1,50 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index e14ee0ca..89425bfe 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -35,7 +35,44 @@ requires = ["setuptools >= 40.8.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools]
+-packages = ["mslib"]
++packages = [
++    'mslib',
++    'mslib.msidp',
++    'mslib.mswms',
++    'mslib.plugins',
++    'mslib.mscolab',
++    'mslib.utils', 'mslib.support',
++    'mslib.static',
++    'mslib.msui',
++    'mslib.msidp.htdocs',
++    'mslib.msidp.templates',
++    'mslib.mswms.app',
++    'mslib.mswms.xml_templates',
++    'mslib.plugins.io',
++    'mslib.mscolab.migrations',
++    'mslib.mscolab.app',
++    'mslib.mscolab.migrations.versions',
++    'mslib.utils.migration',
++    'mslib.support.qt_json_view',
++    'mslib.static.docs',
++    'mslib.static.img',
++    'mslib.static.templates',
++    'mslib.static.templates.idp',
++    'mslib.static.templates.user',
++    'mslib.static.templates.errors',
++    'mslib.msui.ui',
++    'mslib.msui.resources',
++    'mslib.msui.icons',
++    'mslib.msui.qt5',
++    'mslib.msui.resources.default-gravatars',
++    'mslib.msui.resources.mscolab-help',
++    'mslib.msui.icons.16x16',
++    'mslib.msui.icons.64x64',
++    'mslib.msui.icons.32x32',
++    'mslib.msui.icons.128x128',
++    'mslib.msui.icons.256x256',
++    'mslib.msui.icons.48x48',
++    'mslib.msui.icons.config_editor']
+ 
+ [tool.codespell]
+ exclude-file = "codespell-ignored-lines.txt"
