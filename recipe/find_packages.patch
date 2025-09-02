@@ -1,16 +1,20 @@
 diff --git a/pyproject.toml b/pyproject.toml
-index e14ee0ca..df60864a 100644
+index e14ee0ca..a01a4e2e 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -34,8 +34,9 @@ msui = "mslib.msui.msui:main"
- requires = ["setuptools >= 40.8.0"]
+@@ -31,11 +31,12 @@ mswms = "mslib.mswms.mswms:main"
+ msui = "mslib.msui.msui:main"
+ 
+ [build-system]
+-requires = ["setuptools >= 40.8.0"]
++requires = ["setuptools >= 61.0"]
  build-backend = "setuptools.build_meta"
  
 -[tool.setuptools]
 -packages = ["mslib"]
++
 +[tool.setuptools.packages.find]
 +include = ["mslib*"]
-+namespaces = false
  
  [tool.codespell]
  exclude-file = "codespell-ignored-lines.txt"
