@@ -13,6 +13,13 @@ source:
 build:
   skip: true  # [py>312]
   number: 0
+  entry_points:
+    - mscolab = mslib.mscolab.__main__:main
+    - msui = mslib.msui.__main__:main
+    - mswms = mslib.wms.__main__:main
+    - mswms_demodata = mslib.wms.demodata:main
+    - mssautoplot = mslib.mssautoplot.__main__:main
+    - msidp = mslib.idp.__main__:main
 
 requirements:
   build:
@@ -96,11 +103,11 @@ test:
     - mslib
   commands:
     - mswms -h
-  #   - mswms_demodata -h
-  #   - msui -h
-  #   - mscolab -h
-  #   - mssautoplot --help
-  #   - msidp -h  # [not win]
+    - mswms_demodata -h
+    - msui -h
+    - mscolab -h
+    - mssautoplot --help
+    - msidp -h  # [not win]
 
 about:
   summary: 'A client/server application developed in the community to collaboratively create flight plans based on model data.'
