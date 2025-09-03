@@ -8,8 +8,7 @@ source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
   sha256: 9a932c8a84de8fe9d9c89d9f4a9576392ef44067011e3352f2513fedd29a042e
   patches:
-    # remove execfile
-    - remove_execfile.patch
+    - find_packages.patch
 
 build:
   skip: true  # [py>312]
@@ -47,7 +46,7 @@ requirements:
     - requests >=2.31.0
     - scipy
     - skyfield >=1.12
-    - skyfield-data >=6
+    - skyfield-data >=7
     - tk
     - owslib >=0.24
     - unicodecsv
@@ -75,7 +74,7 @@ requirements:
     - python-socketio >=5
     - python-engineio >=4
     - markdown
-    - xstatic
+    - xstatic <2.0.0
     - xstatic-jquery
     - xstatic-bootstrap
     - gpxpy >=1.4.2
