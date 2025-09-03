@@ -92,8 +92,6 @@ requirements:
     - libxmlsec1  # [not win]
 
 test:
-  imports:
-    - mslib
   commands:
     - mswms -h
     - mswms_demodata -h
