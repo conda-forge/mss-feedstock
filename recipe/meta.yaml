@@ -1,4 +1,4 @@
-{% set version = "10.1.0" %}
+{% set version = "10.2.0" %}
 
 package:
   name: mss
@@ -6,14 +6,21 @@ package:
 
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
-  sha256: b04ff67c7394fd42c379ca1979f3c947a6c09b8f28e21de5e2c203c1f8f4037b
+  sha256: 9a932c8a84de8fe9d9c89d9f4a9576392ef44067011e3352f2513fedd29a042e
   patches:
-    # remove execfile
-    - remove_execfile.patch
+    - find_packages.patch
 
 build:
   skip: true  # [py>312]
-  number: 3
+  number: 0
+  entry_points:
+    - mscolab = mslib.mscolab.mscolab:main
+    - msidp = mslib.msidp.idp:main
+    - mssautoplot = mslib.utils.mssautoplot:main
+    - mss = mslib.msui.mss:main
+    - mswms = mslib.mswms.mswms:main
+    - mswms_demodata = mslib.mswms.demodata:main
+    - msui = mslib.msui.msui:main
 
 requirements:
   build:
@@ -21,7 +28,7 @@ requirements:
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29,<3.1                  # [build_platform != target_platform]
     - numpy >=2                           # [build_platform != target_platform]
-    - pip 
+    - pip
     - setuptools
   host:
     - python
@@ -47,7 +54,7 @@ requirements:
     - requests >=2.31.0
     - scipy
     - skyfield >=1.12
-    - skyfield-data >=6
+    - skyfield-data >=7
     - tk
     - owslib >=0.24
     - unicodecsv
@@ -75,7 +82,7 @@ requirements:
     - python-socketio >=5
     - python-engineio >=4
     - markdown
-    - xstatic
+    - xstatic <2.0.0
     - xstatic-jquery
     - xstatic-bootstrap
     - gpxpy >=1.4.2
