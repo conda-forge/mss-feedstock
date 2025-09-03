@@ -94,8 +94,8 @@ requirements:
 test:
   imports:
     - mslib
-  # commands:
-  #   - mswms -h
+  commands:
+    - mswms -h
   #   - mswms_demodata -h
   #   - msui -h
   #   - mscolab -h
