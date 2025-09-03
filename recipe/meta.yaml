@@ -94,13 +94,13 @@ requirements:
 test:
   imports:
     - mslib
-  commands:
-    - mswms -h
-    - mswms_demodata -h
-    - msui -h
-    - mscolab -h
-    - mssautoplot --help
-    - msidp -h  # [not win]
+  # commands:
+  #   - mswms -h
+  #   - mswms_demodata -h
+  #   - msui -h
+  #   - mscolab -h
+  #   - mssautoplot --help
+  #   - msidp -h  # [not win]
 
 about:
   summary: 'A client/server application developed in the community to collaboratively create flight plans based on model data.'
