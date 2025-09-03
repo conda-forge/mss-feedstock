@@ -14,12 +14,13 @@ build:
   skip: true  # [py>312]
   number: 0
   entry_points:
-    - mscolab = mslib.mscolab.__main__:main
-    - msui = mslib.msui.__main__:main
-    - mswms = mslib.wms.__main__:main
-    - mswms_demodata = mslib.wms.demodata:main
-    - mssautoplot = mslib.mssautoplot.__main__:main
-    - msidp = mslib.idp.__main__:main
+    - mscolab = mslib.mscolab.mscolab:main
+    - msidp = mslib.msidp.idp:main
+    - mssautoplot = mslib.utils.mssautoplot:main
+    - mss = mslib.msui.mss:main
+    - mswms = mslib.mswms.mswms:main
+    - mswms_demodata = mslib.mswms.demodata:main
+    - msui = mslib.msui.msui:main
 
 requirements:
   build:
