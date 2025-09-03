@@ -11,5 +11,3 @@ provider:
   osx: azure
   win: azure
 test: native_and_emulated
-azure:
-  store_build_artifacts: true
