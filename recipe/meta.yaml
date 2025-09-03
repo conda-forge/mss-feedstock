@@ -8,7 +8,7 @@ source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
   sha256: 9a932c8a84de8fe9d9c89d9f4a9576392ef44067011e3352f2513fedd29a042e
   patches:
-    - find_packages.patch
+    # - find_packages.patch
 
 build:
   skip: true  # [py>312]
