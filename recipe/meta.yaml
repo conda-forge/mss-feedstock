@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [py>312]
-  number: 0
+  number: 1
   entry_points:
     - mscolab = mslib.mscolab.mscolab:main
     - msidp = mslib.msidp.idp:main
