@@ -6,7 +6,6 @@ copy /Y "%RECIPE_DIR%\msui.ico" "%PREFIX%\Menu\msui.ico"
 %PYTHON% -m pip install . --force-reinstall --no-deps
 
 ; conda-build issue 5311, currently we can't build for windows with pip install
-@echo off
 ;%PYTHON% setup.py install --single-version-externally-managed --record record.txt
 ;%PYTHON% -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 ;%PYTHON% -m pip install . -vvv
