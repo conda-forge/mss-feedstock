@@ -13,9 +13,6 @@ index e14ee0ca..0c4249c3 100644
 -[tool.setuptools]
 -packages = ["mslib"]
 -
-+[tool.setuptools.packages.find]
-+include = ["mslib*"]
-+
  [tool.codespell]
  exclude-file = "codespell-ignored-lines.txt"
  ignore-words-list = [
