@@ -104,6 +104,8 @@ requirements:
     - legacy-cgi  # [unix]
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mslib
   commands:
