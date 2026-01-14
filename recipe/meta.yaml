@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
     - mkdir -p "{{ PREFIX }}/Menu"
     - cp "{{ RECIPE_DIR }}/menu.json" "{{ PREFIX }}/Menu/{{ PKG_NAME }}_menu.json"
