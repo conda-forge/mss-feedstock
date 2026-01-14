@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/Open-MSS/MSS/archive/{{ version }}.tar.gz
   sha256: a4836376b8710b7fe171ee12b1a2ce7e658c0c3330b498eca2a23767b45ee144
-  patches:
-    - find_packages.patch
 
 build:
   noarch: python
