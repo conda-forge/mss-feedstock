@@ -9,7 +9,6 @@ source:
   sha256: a4836376b8710b7fe171ee12b1a2ce7e658c0c3330b498eca2a23767b45ee144
 
 build:
-  skip: true  # [py>313]
   noarch: python
   number: 1
   script:
@@ -36,7 +35,7 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.13
     - __unix  # [unix]
     - __win  # [win]
     - numpy >=2.2.4
