@@ -9,8 +9,9 @@ source:
   sha256: a4836376b8710b7fe171ee12b1a2ce7e658c0c3330b498eca2a23767b45ee144
 
 build:
+  skip: true  # [py>313]
   noarch: python
-  number: 0
+  number: 1
   script:
     - mkdir -p "{{ PREFIX }}/Menu"
     - cp "{{ RECIPE_DIR }}/menu.json" "{{ PREFIX }}/Menu/{{ PKG_NAME }}_menu.json"
