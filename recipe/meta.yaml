@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - mkdir -p "{{ PREFIX }}/Menu"
     - cp "{{ RECIPE_DIR }}/menu.json" "{{ PREFIX }}/Menu/{{ PKG_NAME }}_menu.json"
@@ -35,7 +35,7 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.13
     - __unix  # [unix]
     - __win  # [win]
     - numpy >=2.2.4
