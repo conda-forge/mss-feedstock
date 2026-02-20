@@ -11,7 +11,7 @@ source:
     - is_roundtrip_possible.patch
 build:
   noarch: python
-  number: 2
+  number: 3
   script:
     - mkdir -p "{{ PREFIX }}/Menu"
     - cp "{{ RECIPE_DIR }}/menu.json" "{{ PREFIX }}/Menu/{{ PKG_NAME }}_menu.json"
@@ -30,13 +30,14 @@ build:
 requirements:
   build:
     - pip
-    - setuptools
+    - setuptools <82.0.0
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools <82.0.0
     - pip
   run:
     - python >={{ python_min }},<3.13
+    - setuptools <82.0.0
     - __unix  # [unix]
     - __win  # [win]
     - numpy >=2.2.4
