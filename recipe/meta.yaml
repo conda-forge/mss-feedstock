@@ -45,7 +45,6 @@ requirements:
     - execnet
     - fastkml >=1.1.0,<2
     - shapely >=2.0.0
-    - pygeoif <1.0.0
     - isodate
     - lxml
     - netcdf4
