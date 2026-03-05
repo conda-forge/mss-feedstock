@@ -9,7 +9,7 @@ source:
   sha256: 858a48f1bfaafc1b2ca2d26229cdcb39889920410bdcaec4eecd5df6155db2a1
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - mkdir -p "{{ PREFIX }}/Menu"
     - cp "{{ RECIPE_DIR }}/menu.json" "{{ PREFIX }}/Menu/{{ PKG_NAME }}_menu.json"
@@ -22,7 +22,6 @@ build:
     - mssautoplot = mslib.utils.mssautoplot:main
     - mss = mslib.msui.mss:main
     - mswms = mslib.mswms.mswms:main
-    - mswms_demodata = mslib.mswms.demodata:main
     - msui = mslib.msui.msui:main
 
 requirements:
