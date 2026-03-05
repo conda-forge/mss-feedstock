@@ -86,7 +86,7 @@ requirements:
     - xstatic <2.0.0
     - xstatic-jquery
     - xstatic-bootstrap
-    - humanfriendly = >=10.0,<11
+    - humanfriendly >=10.0,<11
     - gpxpy >=1.4.2
     - metpy
     - pycountry
